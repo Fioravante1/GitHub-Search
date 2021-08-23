@@ -10,11 +10,11 @@ import NotFound from './pages/NotFound';
 function App() {
   return (
     <Switch>
-      <Route component={Login} exact path="/login" />
+      <Route component={Login} exact path="/" />
       <Route component={Repositories} exact path="/repositories" />
       <Route component={Followers} exact path="/followers" />
       <Route component={Following} exact path="/following" />
-      <Route component={Home} exact path="/" />
+      <Route component={Home} exact path="/home" />
       <Route component={NotFound} />
     </Switch>
   );
