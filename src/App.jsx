@@ -6,7 +6,6 @@ import Followers from './pages/Followers';
 import Following from './pages/Following';
 import Home from './pages/Home';
 import NotFound from './pages/NotFound';
-import { GlobalStyle } from './styles/GlobalStyles';
 
 function App() {
   return (
@@ -17,7 +16,6 @@ function App() {
       <Route component={Following} exact path="/following" />
       <Route component={Home} exact path="/home" />
       <Route component={NotFound} />
-      <GlobalStyle />
     </Switch>
   );
 }
