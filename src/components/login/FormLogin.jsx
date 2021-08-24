@@ -4,7 +4,7 @@ import Context from '../../context/Context';
 import requestApi from '../../services/httpServise';
 import FormConteiner from './styles';
 import github from '../../Assets/github.png';
-import { Conteiner } from '../../styles/GlobalStyles';
+// import { Container } from '../../styles/GlobalStyles';
 
 function FormLogin() {
   const { setData, valueInputUser, setValueInputUser } = useContext(Context);
@@ -23,26 +23,26 @@ function FormLogin() {
   }
 
   return (
-    <Conteiner>
-      <FormConteiner>
-        <img src={github} alt="git hub" />
-        <form>
-          <input
-            placeholder="Usuário"
-            id="usergithub"
-            type="text"
-            value={valueInputUser}
-            onChange={handleChange}
-          />
-          <button
-            type="button"
-            onClick={handleOnClick}
-          >
-            ENTRAR
-          </button>
-        </form>
-      </FormConteiner>
-    </Conteiner>
+  // <Container>
+    <FormConteiner>
+      <img src={github} alt="git hub" />
+      <form>
+        <input
+          placeholder="Usuário"
+          id="usergithub"
+          type="text"
+          value={valueInputUser}
+          onChange={handleChange}
+        />
+        <button
+          type="button"
+          onClick={handleOnClick}
+        >
+          ENTRAR
+        </button>
+      </form>
+    </FormConteiner>
+  // </Container>
   );
 }
 
