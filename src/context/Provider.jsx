@@ -1,17 +1,25 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import Context from './Context';
-// import requestApi from '../services/httpServise';
 
 function Provider({ children }) {
   const [data, setData] = useState();
   const [valueInputUser, setValueInputUser] = useState('');
+  const [infoFollowers, setInfoFollowers] = useState([]);
+  const [infoFollowing, setInfoFollowing] = useState([]);
+  const [infoRepos, setInfoRepos] = useState([]);
 
   const objContext = {
     data,
     setData,
     valueInputUser,
     setValueInputUser,
+    infoFollowers,
+    setInfoFollowers,
+    infoFollowing,
+    setInfoFollowing,
+    infoRepos,
+    setInfoRepos,
   };
 
   return (
