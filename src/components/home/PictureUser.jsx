@@ -1,11 +1,14 @@
 import React, { useContext } from 'react';
 import Context from '../../context/Context';
+import { AvatarContainner } from './styles';
 
 function PictureUser() {
   const { data } = useContext(Context);
 
   return (
-    <img src={data.avatar_url} alt={data.name} />
+    <AvatarContainner>
+      <img src={data.avatar_url} alt={data.name} />
+    </AvatarContainner>
   );
 }
 
