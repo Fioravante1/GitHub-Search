@@ -37,6 +37,17 @@ const FormConteiner = styled.div`
       cursor: pointer;
     }
   }
+
+  @media (max-width: 600px) {
+   
+   form button {
+      width: 270px;
+    }
+
+    form input {
+      width: 250px;
+    }
+  }
 `;
 
 export default FormConteiner;
