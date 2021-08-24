@@ -1,9 +1,10 @@
 import React from 'react';
+import PictureUser from '../components/home/PictureUser';
 
 function Home() {
   return (
     <div>
-      <h1>Inicio</h1>
+      <PictureUser />
     </div>
   );
 }
