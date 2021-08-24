@@ -1,13 +1,9 @@
 import React from 'react';
-import ButtonEnter from '../components/login/ButtonEnter';
-import InputUser from '../components/login/InputUser';
+import FormLogin from '../components/login/FormLogin';
 
 function Login() {
   return (
-    <>
-      <InputUser />
-      <ButtonEnter />
-    </>
+    <FormLogin />
   );
 }
 
