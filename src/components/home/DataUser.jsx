@@ -3,28 +3,7 @@ import Context from '../../context/Context';
 import { DataContainer } from './styles';
 
 function DataUser() {
-  const {
-    data,
-    // valueInputUser,
-    // infoFollowers,
-    // setInfoFollowers,
-    // infoFollowing,
-    // setInfoFollowing,
-    // setInfoRepos,
-    // infoRepos,
-  } = useContext(Context);
-
-  // useEffect(() => {
-  //   async function requestData() {
-  //     const responseFollowers = await requestApi(`/${valueInputUser}/followers`);
-  //     const responseFollowing = await requestApi(`/${valueInputUser}/following`);
-  //     const responseRepos = await requestApi(`/${valueInputUser}/repos`);
-  //     setInfoFollowers(responseFollowers);
-  //     setInfoFollowing(responseFollowing);
-  //     setInfoRepos(responseRepos);
-  //   }
-  //   requestData();
-  // }, [valueInputUser]);
+  const { data } = useContext(Context);
 
   return (
     <DataContainer>
