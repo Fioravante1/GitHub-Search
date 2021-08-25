@@ -11,7 +11,7 @@ function InfoUser() {
         <img src={arrow} alt="arrow" />
         <h1>{data.name}</h1>
       </div>
-      <p>f.ichiozzi@gmail.com</p>
+      <p>{data.email}</p>
       <p>{data.location}</p>
     </InfoContainer>
   );
