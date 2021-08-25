@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import Context from '../../context/Context';
-import HeaderContainer from './styles';
 import exit from '../../Assets/exit.png';
+import { HeaderContainer } from './styles';
 
 function Header() {
   const { data } = useContext(Context);
