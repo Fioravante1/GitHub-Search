@@ -1,13 +1,15 @@
 import React from 'react';
+import HeaderFollower from '../components/headerseguidores/HeaderSeg';
 import Footer from '../components/home/Footer';
+import Follower from '../components/seguidores/Follower';
 
 function Followers() {
   return (
-    <div>
-      <h1>followers</h1>
+    <>
+      <HeaderFollower />
+      <Follower />
       <Footer />
-    </div>
+    </>
   );
 }
-
 export default Followers;
