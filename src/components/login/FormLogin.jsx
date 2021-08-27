@@ -43,6 +43,7 @@ function FormLogin() {
         <L.ButtonLogin
           type="submit"
           onClick={handleOnClick}
+          disabled={!valueInputUser}
         >
           ENTRAR
         </L.ButtonLogin>
