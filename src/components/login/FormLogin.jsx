@@ -27,7 +27,7 @@ function FormLogin() {
     setData(response);
     if (response.length === 0) {
       history.push('/');
-      swal('Usuário não encontardo!');
+      swal('Usuário não encontrado!');
     } else {
       history.push('/home');
       setUserFollo(valueInputUser);
