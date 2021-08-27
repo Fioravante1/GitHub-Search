@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { useHistory } from 'react-router-dom';
+import swal from 'sweetalert';
 import Context from '../../context/Context';
 import requestApi from '../../services/httpServise';
 import * as L from './styles';
@@ -24,9 +25,14 @@ function FormLogin() {
     event.preventDefault();
     const response = await requestApi(`/${valueInputUser}`) || [];
     setData(response);
-    history.push('/home');
-    setUserFollo(valueInputUser);
-    setValueInputUser('');
+    if (response.length === 0) {
+      history.push('/');
+      swal('Usuário não encontardo!');
+    } else {
+      history.push('/home');
+      setUserFollo(valueInputUser);
+      setValueInputUser('');
+    }
   }
 
   return (
