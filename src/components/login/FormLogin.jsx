@@ -2,12 +2,16 @@ import React, { useContext } from 'react';
 import { useHistory } from 'react-router-dom';
 import Context from '../../context/Context';
 import requestApi from '../../services/httpServise';
-import FormConteiner from './styles';
+import * as L from './styles';
 import github from '../../Assets/github.png';
-// import { Container } from '../../styles/GlobalStyles';
 
 function FormLogin() {
-  const { setData, valueInputUser, setValueInputUser } = useContext(Context);
+  const {
+    setData,
+    valueInputUser,
+    setValueInputUser,
+    setUserFollo,
+  } = useContext(Context);
 
   const history = useHistory();
 
@@ -16,33 +20,34 @@ function FormLogin() {
     setValueInputUser(newValue);
   }
 
-  async function handleOnClick() {
+  async function handleOnClick(event) {
+    event.preventDefault();
     const response = await requestApi(`/${valueInputUser}`) || [];
     setData(response);
     history.push('/home');
+    setUserFollo(valueInputUser);
+    setValueInputUser('');
   }
 
   return (
-  // <Container>
-    <FormConteiner>
+    <L.FormConteiner>
       <img src={github} alt="git hub" />
-      <form>
-        <input
+      <L.FormLogin onSubmit={handleOnClick}>
+        <L.InptuLogin
           placeholder="Usuário"
           id="usergithub"
           type="text"
           value={valueInputUser}
           onChange={handleChange}
         />
-        <button
-          type="button"
+        <L.ButtonLogin
+          type="submit"
           onClick={handleOnClick}
         >
           ENTRAR
-        </button>
-      </form>
-    </FormConteiner>
-  // </Container>
+        </L.ButtonLogin>
+      </L.FormLogin>
+    </L.FormConteiner>
   );
 }
 

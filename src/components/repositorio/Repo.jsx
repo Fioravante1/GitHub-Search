@@ -8,15 +8,20 @@ import * as R from './styles';
 import getNewId from '../../services/idService';
 
 function Repo() {
-  const { infoRepos, valueInputUser, setInfoRepos } = useContext(Context);
+  const {
+    infoRepos,
+    valueInputUser,
+    setInfoRepos,
+    userFollo,
+  } = useContext(Context);
 
   const history = useHistory();
   const { location: { pathname } } = history;
 
   useEffect(() => {
     async function requestRepos() {
-      if (pathname === '/repositories') {
-        const responseRepos = await requestApi(`/${valueInputUser}/repos`) || [];
+      if (pathname === '/repositories' && valueInputUser === '') {
+        const responseRepos = await requestApi(`/${userFollo}/repos`) || [];
         setInfoRepos(responseRepos);
       }
     }

@@ -2,8 +2,7 @@ import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import Login from './pages/Login';
 import Repositories from './pages/Repositories';
-import Followers from './pages/Followers';
-import Following from './pages/Following';
+import FollowersFollowing from './pages/FollowersFollowing';
 import Home from './pages/Home';
 import NotFound from './pages/NotFound';
 
@@ -12,8 +11,10 @@ function App() {
     <Switch>
       <Route component={Login} exact path="/" />
       <Route component={Repositories} exact path="/repositories" />
-      <Route component={Followers} exact path="/followers" />
-      <Route component={Following} exact path="/following" />
+      <Route component={FollowersFollowing} exact path="/followers" />
+      <Route component={FollowersFollowing} exact path="/following" />
+      <Route component={Home} exact path="/followers/user" />
+      <Route component={Home} exact path="/following/user" />
       <Route component={Home} exact path="/home" />
       <Route component={NotFound} />
     </Switch>

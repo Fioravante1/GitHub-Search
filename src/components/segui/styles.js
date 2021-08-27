@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const ContainerFollowing = styled.div`
+export const ContainerFollower = styled.div`
   display: flex;
   align-items: center;
   width: 100%;
@@ -15,7 +15,7 @@ export const ContainerInfoLogin = styled.div`
   align-items: center;
 `;
 
-export const AvatarFollowing = styled.img`
+export const AvatarFollower = styled.img`
   height: 30px;
   width: 30px;
   margin-left: 10px;
@@ -23,17 +23,16 @@ export const AvatarFollowing = styled.img`
   border: 3px solid #FFFFFF;
 `;
 
-export const IconArrow = styled.img`
-  width: 18px;
-  height: 18px;
-  margin-left: 5px;
-`;
-
-// export const ContainerIconArrow
 export const IconArrowRight = styled.img`
   width: 18px;
   height: 18px;
   margin-right: 10px;
+`;
+
+export const IconArrow = styled.img`
+  width: 18px;
+  height: 18px;
+  margin-left: 5px;
 `;
 
 export const NameLogin = styled.p`

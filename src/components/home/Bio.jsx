@@ -1,25 +1,35 @@
 import React, { useContext } from 'react';
+import { useHistory } from 'react-router-dom';
 import Context from '../../context/Context';
-import { BioContainer } from './styles';
+import * as BI from './styles';
 import arrow from '../../Assets/arrow.png';
 
 function Bio() {
-  const { data } = useContext(Context);
+  const { data, dataFollo } = useContext(Context);
+
+  const history = useHistory();
+  const { location: { pathname } } = history;
+
   return (
-    <BioContainer>
-      <div className="container__bio">
-        <img src={arrow} alt="arrow" />
-        <h1>Bio</h1>
-      </div>
-      <p>
-        Contrary to popular belief, Lorem Ipsum is not simply random text.
-        It has roots in a piece of classical Latin literature from 45 BC,
-        making it over 2000 years old.
-        Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia,
-        looked up one of the more obscure Latin words, consectetur.
-      </p>
-      <p>{data.bio}</p>
-    </BioContainer>
+    pathname === '/home'
+      ? (
+        <BI.BioContainer>
+          <BI.ContainerInfoBio>
+            <img src={arrow} alt="arrow" />
+            <h1>Bio</h1>
+          </BI.ContainerInfoBio>
+          <p>{data.bio}</p>
+        </BI.BioContainer>
+      )
+      : (
+        <BI.BioContainer>
+          <BI.ContainerInfoBio>
+            <img src={arrow} alt="arrow" />
+            <h1>Bio</h1>
+          </BI.ContainerInfoBio>
+          <p>{dataFollo.bio}</p>
+        </BI.BioContainer>
+      )
   );
 }
 

@@ -7,13 +7,13 @@ export const AvatarContainner = styled.div`
   justify-content: center;
   align-items: center;
   top: 92px;
+`;
 
-  img {
+export const ImageAvatar = styled.img`
     height: 115px;
     width: 115px;
     border-radius: 100px;
     border: 3px solid #FFFFFF;
-  }
 `;
 
 export const HeaderContainer = styled.header`
@@ -35,13 +35,20 @@ export const HeaderContainer = styled.header`
   p {
     font-size: 1.5rem;
   }
+`;
 
-  .conteiner__exit {
-    width: 60px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-  }
+export const ContainerExitSave = styled.div`
+  width: 80px;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+
+  img {
+      width: 20px;
+      right: 20px;
+    }
 `;
 
 export const InfoContainer = styled.div`
@@ -52,57 +59,56 @@ export const InfoContainer = styled.div`
   flex-wrap: wrap;
   padding: 0 0 0 30px;
   justify-content: flex-end;
-  
-
-  h1 {
-    font-weight: bold;
-    font-size: 1rem;
-    margin-left: 10px;
-    text-transform: uppercase;
-    color: #FFFFFF;
-  }
-  
+    
   p {
     color: #FFFFFF;
     font-size: 1rem;
   }
+`;
 
-  .container__name {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-  }
-  `;
+export const ContainerName = styled.div`
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+`;
+
+export const NameUser = styled.h1`
+  font-weight: bold;
+  font-size: 1rem;
+  margin-left: 10px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+`;
 
 export const DataContainer = styled.div`
-    width: 100%;
-    height: 100px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    background: #5252525D;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  background: #5252525D;
+`;
 
-    h2 {
-      color: #ffffff;
-      font-weight: bold;
-      margin-bottom: 0;
-      margin-top: 0;
-      font-size: 3rem;
-    }
+export const ContainerDataUser = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
-    p {
-      color: #ffffff;
-      margin-top: 2px;
-    }
+  h2 {
+    color: #ffffff;
+    font-weight: bold;
+    margin-bottom: 0;
+    margin-top: 0;
+    font-size: 3rem;
+  }
 
-    .data__user {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
-  `;
+  p {
+    color: #ffffff;
+    margin-top: 2px;
+  }
+`;
 
 export const BioContainer = styled.div`
     width: 80%;
@@ -122,24 +128,24 @@ export const BioContainer = styled.div`
       color: #ffffff;
       font-size: 1rem;
     }
-
-    .container__bio {
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
-    }
   `;
 
-export const FooterContainer = styled.div`
-    height: 9vh;
-    width: 100vw;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    bottom: 0;
-    border-radius: 15px 15px 0 0; 
-    background: #ffffff;
-    position: fixed;
-    border: none;
-  `;
+export const ContainerInfoBio = styled.div`
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+`;
+
+export const FooterContainer = styled.footer`
+  height: 9vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  bottom: 0;
+  border-radius: 15px 15px 0 0; 
+  background: #ffffff;
+  position: fixed;
+  border: none;
+`;
