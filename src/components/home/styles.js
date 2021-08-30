@@ -52,7 +52,6 @@ export const ContainerExitSave = styled.div`
 `;
 
 export const InfoContainer = styled.div`
-  width: 500px;
   height: 210px;
   display: flex;
   flex-direction: column;

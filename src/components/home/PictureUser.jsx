@@ -11,17 +11,12 @@ function PictureUser() {
   const { location: { pathname } } = history;
 
   return (
-    pathname === '/home'
-      ? (
-        <HO.AvatarContainner>
-          <HO.ImageAvatar src={data.avatar_url} alt={data.name} />
-        </HO.AvatarContainner>
-      )
-      : (
-        <HO.AvatarContainner>
-          <HO.ImageAvatar src={dataFollo.avatar_url} alt={dataFollo.name} />
-        </HO.AvatarContainner>
-      )
+    <HO.AvatarContainner>
+      <HO.ImageAvatar
+        src={pathname === '/home' ? data.avatar_url : dataFollo.avatar_url}
+        alt={pathname === '/home' ? data.name : dataFollo.name}
+      />
+    </HO.AvatarContainner>
   );
 }
 

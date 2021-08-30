@@ -11,33 +11,18 @@ function InfoUser() {
   const { location: { pathname } } = history;
 
   return (
-    pathname === '/home'
-      ? (
-        <HO.InfoContainer>
 
-          <HO.ContainerName className="container__name">
-            <img src={arrow} alt="arrow" />
-            <HO.NameUser>{data.name}</HO.NameUser>
-          </HO.ContainerName>
+    <HO.InfoContainer>
 
-          <p>{data.email}</p>
-          <p>{data.location}</p>
+      <HO.ContainerName className="container__name">
+        <img src={arrow} alt="arrow" />
+        <HO.NameUser>{pathname === '/home' ? data.name : dataFollo.name}</HO.NameUser>
+      </HO.ContainerName>
 
-        </HO.InfoContainer>
-      )
-      : (
-        <HO.InfoContainer>
+      <p>{pathname === '/home' ? data.email : dataFollo.email}</p>
+      <p>{pathname === '/home' ? data.location : dataFollo.location}</p>
 
-          <HO.ContainerName>
-            <img src={arrow} alt="arrow" />
-            <HO.NameUser>{dataFollo.name}</HO.NameUser>
-          </HO.ContainerName>
-
-          <p>{dataFollo.email}</p>
-          <p>{dataFollo.location}</p>
-
-        </HO.InfoContainer>
-      )
+    </HO.InfoContainer>
   );
 }
 

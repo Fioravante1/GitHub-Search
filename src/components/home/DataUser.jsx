@@ -10,47 +10,25 @@ function DataUser() {
   const { location: { pathname } } = history;
 
   return (
-    pathname === '/home'
-      ? (
-        <DS.DataContainer>
+    <DS.DataContainer>
 
-          <DS.ContainerDataUser>
-            <h2>{data.followers}</h2>
-            <p>Seguidores</p>
-          </DS.ContainerDataUser>
+      <DS.ContainerDataUser>
+        <h2>{pathname === '/home' ? data.followers : dataFollo.followers}</h2>
+        <p>Seguidores</p>
+      </DS.ContainerDataUser>
 
-          <DS.ContainerDataUser>
-            <h2>{data.following}</h2>
-            <p>Seguindo</p>
-          </DS.ContainerDataUser>
+      <DS.ContainerDataUser>
+        <h2>{pathname === '/home' ? data.following : dataFollo.following}</h2>
+        <p>Seguindo</p>
+      </DS.ContainerDataUser>
 
-          <DS.ContainerDataUser>
-            <h2>{data.public_repos}</h2>
-            <p>Repos</p>
-          </DS.ContainerDataUser>
+      <DS.ContainerDataUser>
+        <h2>{pathname === '/home' ? data.public_repos : dataFollo.public_repos}</h2>
+        <p>Repos</p>
+      </DS.ContainerDataUser>
 
-        </DS.DataContainer>
-      )
-      : (
-        <DS.DataContainer>
+    </DS.DataContainer>
 
-          <DS.ContainerDataUser>
-            <h2>{dataFollo.followers}</h2>
-            <p>Seguidores</p>
-          </DS.ContainerDataUser>
-
-          <DS.ContainerDataUser>
-            <h2>{dataFollo.following}</h2>
-            <p>Seguindo</p>
-          </DS.ContainerDataUser>
-
-          <DS.ContainerDataUser>
-            <h2>{dataFollo.public_repos}</h2>
-            <p>Repos</p>
-          </DS.ContainerDataUser>
-
-        </DS.DataContainer>
-      )
   );
 }
 

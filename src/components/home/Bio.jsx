@@ -11,25 +11,13 @@ function Bio() {
   const { location: { pathname } } = history;
 
   return (
-    pathname === '/home'
-      ? (
-        <BI.BioContainer>
-          <BI.ContainerInfoBio>
-            <img src={arrow} alt="arrow" />
-            <h1>Bio</h1>
-          </BI.ContainerInfoBio>
-          <p>{data.bio}</p>
-        </BI.BioContainer>
-      )
-      : (
-        <BI.BioContainer>
-          <BI.ContainerInfoBio>
-            <img src={arrow} alt="arrow" />
-            <h1>Bio</h1>
-          </BI.ContainerInfoBio>
-          <p>{dataFollo.bio}</p>
-        </BI.BioContainer>
-      )
+    <BI.BioContainer>
+      <BI.ContainerInfoBio>
+        <img src={arrow} alt="arrow" />
+        <h1>Bio</h1>
+      </BI.ContainerInfoBio>
+      <p>{pathname === '/home' ? data.bio : dataFollo.bio}</p>
+    </BI.BioContainer>
   );
 }
 
