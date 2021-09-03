@@ -24,5 +24,5 @@ Instale React Challenge com npm
 
 ## Link da aplicação!
 
-- [React Challenge](https://react-challenge-fioravante.netlify.app/)
+- [GitHub Search](https://react-challenge-fioravante.netlify.app/)
 
