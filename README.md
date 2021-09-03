@@ -1,4 +1,4 @@
-# React Challenge
+# GitHub Search
 
 A proposta do projeto foi construir uma aplicação que faz consumo da api do GitHub. A aplicação é capaz de achar o usuário GitHub digitado na página de login. Após entrar com o usuário válido, é mostrado informações como número de seguidores, número de seguindo e a quantidade de repos. Além disso, é possível navegar entre as pessoas seguidoras e as que o usuário segue.
 
